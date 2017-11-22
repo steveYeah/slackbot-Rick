@@ -24,7 +24,19 @@ AT_BOT = "<@" + BOT_ID + ">"
 slack_client = SlackClient(os.environ.get("SLACK_BOT_TOKEN"))
 
 
-WEIRD_MADEUP_SOUNDING_CATCHPHRASES = ['', '']
+WEIRD_MADEUP_SOUNDING_CATCHPHRASES = [
+    'wubba lubba dub dub',
+    'Ricky ticky taffy beeeeeartch!',
+    'And that\'s the waaaaaaaay the news goes!',
+    'Hit the sack, Jack',
+    'Uh ohhhh! Somersoult jump',
+    'AIDS!',
+    'And that\'s why I always say, Shumshumschilpiddydah!',
+    'GRASSSSS... tastes bad!',
+    'No jumping in the sewer!',
+    'BURGERTIME!',
+    'Lick, lick, lick, my BALLS!',
+]
 
 
 def random_catchphrase():
@@ -147,7 +159,7 @@ def handle_command(command, channel):
         slack_client.api_call(
             "chat.postMessage",
             channel=channel,
-            text=random_fortune(),
+            text=random_catchphrase(),
             as_user=True
         )
         return

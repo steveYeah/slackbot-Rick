@@ -4,7 +4,7 @@ from setuptools import setup
 
 
 setup(
-    name='slackbot-rick',
+    name='slackbot_rick',
     description='I\'m a Slackbot, Dumbass',
     version='0.0.1',
     license="MIT",
@@ -17,8 +17,8 @@ setup(
     ],
     entry_points={
         'console_scripts': [
-            'slackbot-rick=slackbot-rick.cli:main',
+            'slackbot_rick=slackbot_rick.cli:main',
         ],
     },
-    package_dir={'slackbot-rick': 'slackbot-rick'},
+    package_dir={'slackbot_rick': 'slackbot_rick'},
 )
